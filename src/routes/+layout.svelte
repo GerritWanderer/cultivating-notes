@@ -34,7 +34,7 @@
 	<footer class="border-t border-gray-200 mt-16">
 		<div class="px-4 py-8">
 			<p class="text-center text-gray-600 text-sm">
-				© {new Date().getFullYear()} Cultivating Notes with Obsidian. Built with SvelteKit, Tailwind CSS and Flowbite.
+				© {new Date().getFullYear()} Cultivating Notes with Obsidian. Built with Svelte, Tailwind and Flowbite.
 			</p>
 		</div>
 	</footer>
