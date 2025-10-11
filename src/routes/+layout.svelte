@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+  import logo from '$lib/assets/logo.svg';
+	import { Navbar, NavBrand, NavUl, NavLi, NavHamburger, uiHelpers, Button } from 'flowbite-svelte';
 
 	let { children } = $props();
 </script>
@@ -10,23 +12,29 @@
 	<title>Cultivating Notes</title>
 </svelte:head>
 
-<div class="min-h-screen bg-white">
-	<nav class="border-b border-gray-200">
-		<div class="max-w-4xl mx-auto px-4 py-4">
-			<a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition">
-				Cultivating Notes
-			</a>
-		</div>
-	</nav>
+<div class="min-h-screen mx-auto max-w-4xl bg-white">
+<Navbar breakpoint="xl">
+  <NavBrand href="/">
+    <img src={logo} class="me-3 h-6 sm:h-9" alt="Logo" />
+    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Cultivating Notes</span>
+  </NavBrand>
+  <div class="flex order-2">
+    <Button size="sm">Get started</Button>
+    <NavHamburger />
+  </div>
+  <NavUl class="order-1">
+    <NavLi href="/">Home</NavLi>
+  </NavUl>
+</Navbar>
 
 	<main>
 		{@render children?.()}
 	</main>
 
 	<footer class="border-t border-gray-200 mt-16">
-		<div class="max-w-4xl mx-auto px-4 py-8">
+		<div class="px-4 py-8">
 			<p class="text-center text-gray-600 text-sm">
-				© {new Date().getFullYear()} Cultivating Notes. Built with SvelteKit & Tailwind CSS.
+				© {new Date().getFullYear()} Cultivating Notes with Obsidian. Built with SvelteKit, Tailwind CSS and Flowbite.
 			</p>
 		</div>
 	</footer>
