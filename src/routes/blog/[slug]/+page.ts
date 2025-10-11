@@ -1,15 +1,14 @@
-import { posts } from '$lib/posts';
-import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+import { error } from '@sveltejs/kit'
 
-export const load: PageLoad = ({ params }) => {
-	const post = posts.find((p) => p.slug === params.slug);
+export async function load({ params }) {
+  try {
+    const blog = await import(`../../../blog/${params.slug}.md`);
 
-	if (!post) {
-		throw error(404, 'Post not found');
-	}
-
-	return {
-		post
-	};
+    return {
+      content: blog.default,
+      meta: blog.metadata
+    };
+  } catch (e) {
+    error(404, `Could not find ${params.slug}`);
+  }
 };

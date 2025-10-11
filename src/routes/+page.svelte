@@ -25,8 +25,6 @@
 							day: 'numeric'
 						})}
 					</time>
-					<span>•</span>
-					<span>{post.author}</span>
 				</div>
 				<p class="text-gray-700 mb-4">{post.excerpt}</p>
 				<div class="flex gap-2">
