@@ -13,7 +13,7 @@
 </svelte:head>
 
 <div class="min-h-screen mx-auto max-w-4xl bg-white">
-<Navbar breakpoint="xl">
+<Navbar breakpoint="2xl">
   <NavBrand href="/">
     <img src={logo} class="me-3 h-6 sm:h-9" alt="Logo" />
     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Cultivating Notes</span>
