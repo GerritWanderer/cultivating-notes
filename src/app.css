@@ -6,27 +6,59 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-50: #fff5f2;
-  --color-primary-100: #fff1ee;
-  --color-primary-200: #ffe4de;
-  --color-primary-300: #ffd5cc;
-  --color-primary-400: #ffbcad;
-  --color-primary-500: #fe795d;
-  --color-primary-600: #ef562f;
-  --color-primary-700: #eb4f27;
-  --color-primary-800: #cc4522;
-  --color-primary-900: #a5371b;
+  /* Tokyo Night Color Palette */
+  --color-primary-50: #e1e5f2;
+  --color-primary-100: #c0caf5;
+  --color-primary-200: #a9b1d6;
+  --color-primary-300: #9aa5ce;
+  --color-primary-400: #7aa2f7;
+  --color-primary-500: #7aa2f7;
+  --color-primary-600: #5a7abf;
+  --color-primary-700: #3d59a1;
+  --color-primary-800: #2d4a8a;
+  --color-primary-900: #1f3468;
 
-  --color-secondary-50: #f0f9ff;
-  --color-secondary-100: #e0f2fe;
-  --color-secondary-200: #bae6fd;
-  --color-secondary-300: #7dd3fc;
-  --color-secondary-400: #38bdf8;
-  --color-secondary-500: #0ea5e9;
-  --color-secondary-600: #0284c7;
-  --color-secondary-700: #0369a1;
-  --color-secondary-800: #075985;
-  --color-secondary-900: #0c4a6e;
+  --color-secondary-50: #fbdae4;
+  --color-secondary-100: #f7b8cc;
+  --color-secondary-200: #f7a0ba;
+  --color-secondary-300: #f788a6;
+  --color-secondary-400: #f7768e;
+  --color-secondary-500: #f7768e;
+  --color-secondary-600: #e9617a;
+  --color-secondary-700: #d4495f;
+  --color-secondary-800: #b83249;
+  --color-secondary-900: #951d32;
+
+  /* Tokyo Night Base Colors */
+  --color-tokyonight-bg: #1a1b26;
+  --color-tokyonight-bg-dark: #16161e;
+  --color-tokyonight-bg-highlight: #292e42;
+  --color-tokyonight-terminal-black: #414868;
+  --color-tokyonight-fg: #c0caf5;
+  --color-tokyonight-fg-dark: #a9b1d6;
+  --color-tokyonight-fg-gutter: #3b4261;
+  --color-tokyonight-dark3: #545c7e;
+  --color-tokyonight-comment: #565f89;
+  --color-tokyonight-dark5: #737aa2;
+  --color-tokyonight-blue0: #3d59a1;
+  --color-tokyonight-blue: #7aa2f7;
+  --color-tokyonight-cyan: #7dcfff;
+  --color-tokyonight-blue1: #2ac3de;
+  --color-tokyonight-blue2: #0db9d7;
+  --color-tokyonight-blue5: #89ddff;
+  --color-tokyonight-blue6: #b4f9f8;
+  --color-tokyonight-blue7: #394b70;
+  --color-tokyonight-magenta: #bb9af7;
+  --color-tokyonight-magenta2: #ff007c;
+  --color-tokyonight-purple: #9d7cd8;
+  --color-tokyonight-orange: #ff9e64;
+  --color-tokyonight-yellow: #e0af68;
+  --color-tokyonight-green: #9ece6a;
+  --color-tokyonight-green1: #73daca;
+  --color-tokyonight-green2: #41a6b5;
+  --color-tokyonight-teal: #1abc9c;
+  --color-tokyonight-red: #f7768e;
+  --color-tokyonight-red1: #db4b4b;
 
     --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -37,6 +69,11 @@
 @source "../node_modules/flowbite-svelte-icons/dist";
 
 @layer base {
+  /* Tokyo Night body background */
+  body {
+    background-color: #1a1b26;
+  }
+
   /* disable chrome cancel button */
   input[type="search"]::-webkit-search-cancel-button {
     display: none;
