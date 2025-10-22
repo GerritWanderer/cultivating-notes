@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import icon from '$lib/assets/icon.png';
 	import { Navbar, NavBrand, NavUl, NavLi, NavHamburger, Button } from 'flowbite-svelte';
 
 	let { children } = $props();
@@ -12,22 +13,35 @@
 </svelte:head>
 
 <div class="mx-auto min-h-screen max-w-4xl bg-tokyonight-bg text-tokyonight-fg">
-	<Navbar breakpoint="2xl" class="bg-tokyonight-bg border-b border-tokyonight-fg-gutter">
+	<Navbar breakpoint="2xl" class="border-b border-tokyonight-fg-gutter bg-tokyonight-bg">
 		<NavBrand href="/">
+			<img src={icon} class="h-10" alt="logo" />
 			<span class="self-center text-xl font-semibold whitespace-nowrap text-tokyonight-blue"
 				>gerrit-wanderer.dev</span
 			>
 		</NavBrand>
 		<div class="order-2 flex">
-			<Button size="sm" class="bg-tokyonight-magenta hover:bg-tokyonight-purple text-tokyonight-bg">New Guide: Cultivating Notes</Button>
-			<NavHamburger class="text-tokyonight-fg hover:bg-tokyonight-bg-dark focus:ring-tokyonight-fg-gutter" />
+			<Button size="sm" class="bg-tokyonight-magenta text-tokyonight-bg hover:bg-tokyonight-purple"
+				>New Guide: Cultivating Notes</Button
+			>
+			<NavHamburger
+				class="text-tokyonight-fg hover:bg-tokyonight-bg-dark focus:ring-tokyonight-fg-gutter"
+			/>
 		</div>
 		<NavUl class="order-1">
 			<NavLi href="/" class="text-tokyonight-fg hover:text-tokyonight-cyan">Home</NavLi>
-			<NavLi href="/notes/about-me" class="text-tokyonight-fg hover:text-tokyonight-cyan">About me</NavLi>
-			<NavLi href="/notes/current-focus" class="text-tokyonight-fg hover:text-tokyonight-cyan">Current Focus</NavLi>
-			<NavLi href="/notes/learned-today" class="text-tokyonight-fg hover:text-tokyonight-cyan">Things I learned</NavLi>
-			<NavLi href="/notes/tools" class="text-tokyonight-fg hover:text-tokyonight-cyan">Tools I use</NavLi>
+			<NavLi href="/notes/about-me" class="text-tokyonight-fg hover:text-tokyonight-cyan"
+				>About me</NavLi
+			>
+			<NavLi href="/notes/current-focus" class="text-tokyonight-fg hover:text-tokyonight-cyan"
+				>Current Focus</NavLi
+			>
+			<NavLi href="/notes/learned-today" class="text-tokyonight-fg hover:text-tokyonight-cyan"
+				>Things I learned</NavLi
+			>
+			<NavLi href="/notes/tools" class="text-tokyonight-fg hover:text-tokyonight-cyan"
+				>Tools I use</NavLi
+			>
 		</NavUl>
 	</Navbar>
 
