@@ -8,7 +8,7 @@ title: Hi, I'm Gerrit! 👋
 ---
 I'm a **Software Engineer** from Berlin, Germany.
 
-This is [my garden](/notes/my-garden) with [cultivated notes](/notes/cultivating-notes), but for you it may look like a wildflower field. In any case, this place is dedicated for thoughts and ideas to sprout, develop strong roots and grow.
+This is [my garden](/notes/my-garden) with a selection of [cultivated notes](/notes/cultivating-notes), but for you it may look like a wildflower field. In any case, this place is dedicated for thoughts and ideas to sprout, build strong roots and grow.
 I keep many of them public because [learning in public](https://www.swyx.io/learn-in-public/) helps me to write notes with increased focus and awareness.
 
 Here are some things that might be interesting to you:

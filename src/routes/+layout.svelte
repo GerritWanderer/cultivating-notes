@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import logo from '$lib/assets/logo.svg';
 	import { Navbar, NavBrand, NavUl, NavLi, NavHamburger, Button } from 'flowbite-svelte';
 
 	let { children } = $props();
@@ -9,23 +8,26 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Cultivating Notes</title>
+	<title>gerrit-wanderer.dev</title>
 </svelte:head>
 
 <div class="mx-auto min-h-screen max-w-4xl bg-white">
 	<Navbar breakpoint="2xl">
 		<NavBrand href="/">
-			<img src={logo} class="me-3 h-6 sm:h-9" alt="Logo" />
 			<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-				>Cultivating Notes</span
+				>gerrit-wanderer.dev</span
 			>
 		</NavBrand>
 		<div class="order-2 flex">
-			<Button size="sm">Get started</Button>
+			<Button size="sm">New Guide: Cultivating Notes</Button>
 			<NavHamburger />
 		</div>
 		<NavUl class="order-1">
 			<NavLi href="/">Home</NavLi>
+			<NavLi href="/notes/about-me">About me</NavLi>
+			<NavLi href="/notes/current-focus">Current Focus</NavLi>
+			<NavLi href="/notes/learned-today">Things I learned</NavLi>
+			<NavLi href="/notes/tools">Tools I use</NavLi>
 		</NavUl>
 	</Navbar>
 
